@@ -1,0 +1,2 @@
+BDD name : application
+collection1 : restaurants
