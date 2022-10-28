@@ -1,2 +1,3 @@
 BDD name : application
 collection1 : restaurants
+colelction2 : users

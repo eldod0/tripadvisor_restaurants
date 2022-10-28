@@ -52,5 +52,12 @@
 		border-radius: 5px;
         border-width: 2px;
 		padding: 10px;
+		background-color: white;
+		transition: 0.3s;
+	}
+
+	form button:hover{
+		background-color: black;
+        color: white;
 	}
 </style>
