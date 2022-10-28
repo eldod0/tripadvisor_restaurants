@@ -1,8 +1,6 @@
 
 import type { Actions } from './$types';
 import clientPromise from '../../lib/mongodb-client';
-import { json } from '@sveltejs/kit';
-
 
 export const actions: Actions = {
   submit_rest: async ({cookies, request}) => {

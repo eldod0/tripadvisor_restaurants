@@ -1,6 +1,9 @@
-<script>
-	import RandomRest from "./RandomRest.svelte";
+<script lang='ts'>
+	import { writable } from 'svelte/store';
+	import type { PageData } from './$types';
 
+    export let data: PageData;
+	const bestRestaurants = writable(data.documents);
 </script>
 
 <svelte:head>
@@ -16,7 +19,12 @@
 		</form>
 	</div>
 
-	<RandomRest />
+	{#each $bestRestaurants as item, index}
+        <div class="restaurant_Quickpresentation">
+            <h3>{item.rest_name}</h3>
+        </div>
+    {/each} 
+	<!--RandomRest /-->
 </section>
 
 <style>

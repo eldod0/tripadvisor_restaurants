@@ -1,6 +1,8 @@
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad  } from './$types';
 import clientPromise from '../lib/mongodb-client';
 import { writable } from 'svelte/store';
+import type restaurants from '../lib/models/restaurants';
+import { ObjectId } from "mongodb";
 
 export const load: PageServerLoad = async () => {
     const dbConnection = await clientPromise;
@@ -9,9 +11,9 @@ export const load: PageServerLoad = async () => {
     const collectionName = String(process.env['COLLECTION_NAME']);
     const collection = db.collection(collectionName);
 
-    const documents = await collection.find().sort({rest_rating:1}).limit(2).toArray();
+    //const documents = await collection.find().sort({rest_rating:1}).limit(2).toArray();
     return{
-        documents:documents
+        documents:JSON.parse(JSON.stringify(await collection.find().sort({rest_rating:1}).limit(2).toArray()))
     }
 }
 
