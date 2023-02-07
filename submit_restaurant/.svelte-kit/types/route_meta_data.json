@@ -17,5 +17,11 @@
 	],
 	"register": [
 		"src/routes/register/+page.server.ts"
+	],
+	"resultats": [
+		"src/routes/resultats/+page.server.ts"
+	],
+	"restaurant": [
+		"src/routes/restaurant/+page.server.ts"
 	]
 }

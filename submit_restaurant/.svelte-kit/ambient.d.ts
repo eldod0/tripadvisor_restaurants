@@ -27,27 +27,22 @@
  */
 declare module '$env/static/private' {
 	export const ALLUSERSPROFILE: string;
-	export const AMDRMPATH: string;
 	export const APPDATA: string;
-	export const BESIEGE_GAME_ASSEMBLIES: string;
-	export const BESIEGE_UNITY_ASSEMBLIES: string;
 	export const COLOR: string;
 	export const CommonProgramFiles: string;
 	export const CommonProgramW6432: string;
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
+	export const configsetroot: string;
 	export const DriverData: string;
 	export const EDITOR: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
+	export const FLEXID_LIBRARY_PATH: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
 	export const HOMEPATH: string;
 	export const INIT_CWD: string;
-	export const JAVA_HOME: string;
 	export const LOCALAPPDATA: string;
 	export const LOGONSERVER: string;
-	export const MOZ_PLUGIN_PATH: string;
 	export const NODE: string;
 	export const NODE_EXE: string;
 	export const NPM_CLI_JS: string;
@@ -74,6 +69,7 @@ declare module '$env/static/private' {
 	export const NPM_PREFIX_NPM_CLI_JS: string;
 	export const NUMBER_OF_PROCESSORS: string;
 	export const OneDrive: string;
+	export const OneDriveConsumer: string;
 	export const OS: string;
 	export const Path: string;
 	export const PATHEXT: string;
@@ -87,7 +83,6 @@ declare module '$env/static/private' {
 	export const PROMPT: string;
 	export const PSModulePath: string;
 	export const PUBLIC: string;
-	export const SESSIONNAME: string;
 	export const SystemDrive: string;
 	export const SystemRoot: string;
 	export const TEMP: string;
@@ -96,9 +91,10 @@ declare module '$env/static/private' {
 	export const USERDOMAIN_ROAMINGPROFILE: string;
 	export const USERNAME: string;
 	export const USERPROFILE: string;
-	export const VBOX_HWVIRTEX_IGNORE_SVM_IN_USE: string;
-	export const VBOX_MSI_INSTALL_PATH: string;
 	export const windir: string;
+	export const WSLENV: string;
+	export const WT_PROFILE_ID: string;
+	export const WT_SESSION: string;
 	export const DB_CONN_STRING: string;
 	export const DB_NAME: string;
 	export const COLLECTION_NAME: string;
@@ -132,27 +128,22 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		ALLUSERSPROFILE: string;
-		AMDRMPATH: string;
 		APPDATA: string;
-		BESIEGE_GAME_ASSEMBLIES: string;
-		BESIEGE_UNITY_ASSEMBLIES: string;
 		COLOR: string;
 		CommonProgramFiles: string;
 		CommonProgramW6432: string;
 		COMPUTERNAME: string;
 		ComSpec: string;
+		configsetroot: string;
 		DriverData: string;
 		EDITOR: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
+		FLEXID_LIBRARY_PATH: string;
 		HOME: string;
 		HOMEDRIVE: string;
 		HOMEPATH: string;
 		INIT_CWD: string;
-		JAVA_HOME: string;
 		LOCALAPPDATA: string;
 		LOGONSERVER: string;
-		MOZ_PLUGIN_PATH: string;
 		NODE: string;
 		NODE_EXE: string;
 		NPM_CLI_JS: string;
@@ -179,6 +170,7 @@ declare module '$env/dynamic/private' {
 		NPM_PREFIX_NPM_CLI_JS: string;
 		NUMBER_OF_PROCESSORS: string;
 		OneDrive: string;
+		OneDriveConsumer: string;
 		OS: string;
 		Path: string;
 		PATHEXT: string;
@@ -192,7 +184,6 @@ declare module '$env/dynamic/private' {
 		PROMPT: string;
 		PSModulePath: string;
 		PUBLIC: string;
-		SESSIONNAME: string;
 		SystemDrive: string;
 		SystemRoot: string;
 		TEMP: string;
@@ -201,9 +192,10 @@ declare module '$env/dynamic/private' {
 		USERDOMAIN_ROAMINGPROFILE: string;
 		USERNAME: string;
 		USERPROFILE: string;
-		VBOX_HWVIRTEX_IGNORE_SVM_IN_USE: string;
-		VBOX_MSI_INSTALL_PATH: string;
 		windir: string;
+		WSLENV: string;
+		WT_PROFILE_ID: string;
+		WT_SESSION: string;
 		DB_CONN_STRING: string;
 		DB_NAME: string;
 		COLLECTION_NAME: string;

@@ -7,7 +7,9 @@ export { matchers } from './client-matchers.js';
 	() => import('./nodes/4'),
 	() => import('./nodes/5'),
 	() => import('./nodes/6'),
-	() => import('./nodes/7')];
+	() => import('./nodes/7'),
+	() => import('./nodes/8'),
+	() => import('./nodes/9')];
 
 			export const server_loads = [];
 
@@ -15,9 +17,11 @@ export { matchers } from './client-matchers.js';
 	"": [~2],
 	"about": [3],
 	"register": [~4],
-	"submit_restaurant": [~5],
-	"sverdle": [~6],
-	"sverdle/how-to-play": [7]
+	"restaurant": [~5],
+	"resultats": [~6],
+	"submit_restaurant": [~7],
+	"sverdle": [~8],
+	"sverdle/how-to-play": [9]
 };
 
 			export const hooks = {

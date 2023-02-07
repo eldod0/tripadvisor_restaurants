@@ -1,9 +1,17 @@
 <script lang='ts'>
 	import { writable } from 'svelte/store';
 	import type { PageData } from './$types';
+	import { navigate } from 'svelte-routing';
 
     export let data: PageData;
 	const bestRestaurants = writable(data.documents);
+	let searchValue = '';
+	let showResults = false;
+
+	function handleSearchInput(event: Event) {
+		searchValue = (event.target as HTMLInputElement).value;
+	}
+
 </script>
 
 <svelte:head>
@@ -14,16 +22,20 @@
 <section>
 	<h1>Recherche de restaurants</h1>
 	<div class="searchBar">
-		<form>
-			<input type="search" name="search"/><button type="submit">Recherche</button>
+		<!--form on:submit={handleSearchSubmit}/-->
+		<form action={"/resultats"}>
+			<input type="search" name="query" bind:value={searchValue} on:input={handleSearchInput}/>
+			<button type="submit">Recherche</button>		
 		</form>
 	</div>
+	<h1>Nos derniers ajouts</h1>
+	{#each $bestRestaurants  as item, index}
+	<div class="restaurant_Quickpresentation">
+		<a href="/restaurant?name={item.rest_name}">{item.rest_name}</a>
+		<h5>{item.rest_description}</h5>
 
-	{#each $bestRestaurants as item, index}
-        <div class="restaurant_Quickpresentation">
-            <h3>{item.rest_name}</h3>
-        </div>
-    {/each} 
+	</div>
+	{/each}
 	<!--RandomRest /-->
 </section>
 

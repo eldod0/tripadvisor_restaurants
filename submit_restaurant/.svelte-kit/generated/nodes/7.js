@@ -1,3 +1,2 @@
-import * as shared from "..\\..\\..\\src\\routes\\sverdle\\how-to-play\\+page.ts";
-export { shared };
-export { default as component } from "..\\..\\..\\src\\routes\\sverdle\\how-to-play\\+page.svelte";
+export { default as component } from "..\\..\\..\\src\\routes\\submit_restaurant\\+page.svelte";
+export const server = true;
